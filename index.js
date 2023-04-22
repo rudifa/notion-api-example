@@ -18,6 +18,8 @@ const notion = new Client({auth: NOTION_API_KEY});
   console.log('\n=== databases response:\n', response);
 })();
 
+/*
+// WORKS
 // get a list of all pages in a database
 (async () => {
   const databaseId = NOTION_API_DATABASE;
@@ -27,6 +29,7 @@ const notion = new Client({auth: NOTION_API_KEY});
   console.log('\n=== databases query response:\n', response);
 })();
 
+// WORKS
 // get a list of blocks
 (async () => {
   const databaseId = NOTION_API_DATABASE;
@@ -35,10 +38,11 @@ const notion = new Client({auth: NOTION_API_KEY});
   });
   console.log('\n=== blocks response:\n', response);
 })();
+*/
 
 /*
+// FAILS, message: 'Insufficient permissions for this endpoint.'
 // get a list of users
-// message: 'Insufficient permissions for this endpoint.'
 (async () => {
   const response = await notion.users.list();
   console.log('\n=== users response:\n', response);
